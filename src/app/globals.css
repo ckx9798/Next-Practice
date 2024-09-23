@@ -1,0 +1,19 @@
+body {
+  background-color: antiquewhite;
+}
+.main_container {
+  margin: 0;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 150px;
+}
+.Product_List {
+  width: 500px;
+  height: 300px;
+  margin: 0 auto;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
