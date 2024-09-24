@@ -1,13 +1,19 @@
 export default function List() {
+  let 상품 = ["tomato", "Pasta", "Coconut"];
+
   return (
     <div className="main_container">
       <h3> Products List</h3>
-      <div className="Product_List">
-        <h4>상품명 $40</h4>
-      </div>
-      <div className="Product_List">
-        <h4>상품명 $30</h4>
-      </div>
+      {상품.map((item, i) => {
+        return (
+          <div className="Product_List" key={i}>
+            <img src={`/food${i}.png`} className="map_img" />
+            <img src={"/food" + i + ".png"} className="map_img" />
+            <h4>{item} $40</h4>
+          </div>
+        );
+      })}
+      ;
     </div>
   );
 }

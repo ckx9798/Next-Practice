@@ -1,19 +1,39 @@
 body {
   background-color: antiquewhite;
 }
+.Navbar {
+  width: 100%;
+  background-color: azure;
+}
+.Navbar_Link {
+  text-decoration: none;
+  color: tomato;
+  font-size: 25px;
+  margin-left: 10px;
+}
 .main_container {
   margin: 0;
   font-size: 30px;
   text-align: center;
   margin-top: 150px;
 }
+.main_container h3 {
+  color: red;
+  font-weight: 800;
+}
 .Product_List {
-  width: 500px;
-  height: 300px;
+  width: 400px;
+  height: auto;
   margin: 0 auto;
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+  flex-direction: column;
+}
+
+.map_img {
+  width: 100%;
+  height: auto;
 }
