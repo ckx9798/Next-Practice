@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export default function List() {
   let 상품 = ["tomato", "Pasta", "Coconut"];
-  let [foodNumber, AfoodNumber] = useState(0);
+  let [foodNumber, SetFoodNumber] = useState([0, 1, 2]);
   return (
     <div className="main_container">
       <h3> Products List</h3>
@@ -12,19 +12,19 @@ export default function List() {
           <div className="Product_List" key={i}>
             <img src={`/food${i}.png`} className="map_img" />
             <h4>{item} $40</h4>
-            <span> {foodNumber} </span>
+            <span> {foodNumber[i]} </span>
             <button
               onClick={() => {
-                AfoodNumber(foodNumber + 1);
+                let copy = [...foodNumber];
+                copy[i]++;
+                SetFoodNumber(copy);
               }}
             >
-              {" "}
-              +{" "}
+              버튼
             </button>
           </div>
         );
       })}
-      ;
     </div>
   );
 }
